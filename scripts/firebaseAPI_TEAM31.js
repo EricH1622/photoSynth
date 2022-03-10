@@ -3,12 +3,12 @@
 //----------------------------------------
 var firebaseConfig = {
     apiKey: "AIzaSyDi4rTv98Kjz3wr4-x8u8L-80mc7st_Kr4",
-    authDomain: "fir-comp1800-4d96a.firebaseapp.com",
-    projectId: "fir-comp1800-4d96a",
-    storageBucket: "fir-comp1800-4d96a.appspot.com",
-    messagingSenderId: "303809272581",
-    appId: "1:303809272581:web:498117f3ca56ef348af56c",
-    measurementId: "G-QSDDYNCRS6"
+  authDomain: "bby31-project.firebaseapp.com",
+  projectId: "bby31-project",
+  storageBucket: "bby31-project.appspot.com",
+  messagingSenderId: "685328665926",
+  appId: "1:685328665926:web:b665930b3aba75e349e947",
+  measurementId: "G-HS8K9N76HN"
 };
 
 //--------------------------------------------
