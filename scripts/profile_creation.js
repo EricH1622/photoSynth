@@ -1,4 +1,4 @@
-var currentUser  
+var currentUser 
 
 function populateInfo() {
     firebase.auth().onAuthStateChanged(user => {
@@ -14,20 +14,20 @@ function populateInfo() {
                     var userName = userDoc.data().name;
                     var userBio = userDoc.data().bio;
                     var userCity = userDoc.data().city;
-                    var userCamerag = userDoc.data().camerag;
+                    var userCameragear = userDoc.data().gear;
 
                     //if the data fields are not empty, then write them in to the form.
                     if (userName != null) {
-                        document.getElementById("usernameinput").value = userName;
+                        document.getElementById("nameInput").value = userName;
                     }
                     if (userBio != null) {
-                        document.getElementById("bioinput").value = userBio;
+                        document.getElementById("bioInput").value = userBio;
                     }
                     if (userCity != null) {
-                        document.getElementById("cityinput").value = userCity;
+                        document.getElementById("cityInput").value = userCity;
                     }
-                    if (userCarmerag != null) {
-                        document.getElementById("cameraginput").value = userCamerag;
+                    if (userCameragear != null) {
+                        document.getElementById("gearInput").value = userCameragear;
                     }
                 })
         } else {
@@ -45,21 +45,21 @@ function editUserInfo() {
     document.getElementById('personalInfoFields').disabled = false;
  }
 
-function saveUserInfo() {
-    userName = document.getElementById('usernamenput').value;       //get the value of the field with id="nameInput"
-    userSchool = document.getElementById('bioinput').value;     //get the value of the field with id="schoolInput"
-    userCity = document.getElementById('cityinput').value;
+ function saveUserInfo() {
+    userName = document.getElementById('nameInput').value;       //get the value of the field with id="nameInput"
+    userBio = document.getElementById('bioInput').value;     //get the value of the field with id="schoolInput"
+    userCity = document.getElementById('cityInput').value;
+    userCameragear = document.getElementById('gearInput').value;
 
     currentUser.update({
-        name: userName,
-        school: userBio,
+        username: userName,
+        bio: userBio,
         city: userCity,
-        camerag: userCamerag
-
+        gear: userCameragear
     })
-        .then(() => {
-            console.log("Document successfully updated!");
-        })
+    .then(() => {
+        console.log("Document successfully updated!");
+    })
 
     document.getElementById('personalInfoFields').disabled = true;
 }

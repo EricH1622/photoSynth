@@ -70,40 +70,33 @@
     </div>
   </nav>
 
-  <div class="px-1 py-4 my-2 text-center">
-    <h1 class="display-3 fw-bold">Profile Creation</h1>
+  <div class="px-1 py-2 my-5">
+    <h1 class="display-4">Profile Creation</h1>
+    <br>
+    <div class="form-group px-2 py-3">
+      <label>UserName</label>
+      <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
+    </div>
+    <div class="form-group px-2 py-3">
+      <label>Bio</label>
+      <input type="text" id="schoolInput" class="form-control" placeholder="Please write a bio for yourself">
+    </div>
+    <div class="form-group px-2 py-3">
+      <label>City</label>
+      <input type="text" id="cityInput" class="form-control" placeholder="Enter your city">
+    </div>
+    <div class="form-group px-2 py-3">
+      <label>Camera Gear</label>
+      <input type="text" id="gearInput" class="form-control" placeholder="Enter your gear">
+    </div>
+    </fieldset>
+    <div class="d-flex justify-content-end mt-5">
+      <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+      <span style="width: 10px"></span>
+      <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+    </div>
+    </form>
   </div>
-
-<div class="container">
-        <h1>My Info </h1>
-        <form>
-            <fieldset class="mb-3" id="personalInfoFields" disabled>
-                <div class="form-group py-3">
-                    <label >Username</label>
-                    <input type="text" id="usernameinput" class="form-control" placeholder="Enter your Username">
-                </div>
-                <div class="form-group py-3">
-                    <label >Bio</label>
-                    <input type="text" id="bioinput" class="form-control" placeholder="Enter a description about yourself">
-                </div>
-                <div class="form-group py-3">
-                    <label >City</label>
-                    <input type="text" id="cityinput" class="form-control" placeholder="What City are you Based in?">
-                </div>
-                <div class="form-group py-3">
-                    <label >Camera Gear</label>
-                    <input type="text" id="cameraginput" class="form-control" placeholder="What gear do you use for your photos?">
-                </div>
-                
-            </fieldset>
-            <div class="d-flex justify-content-end mt-5">
-                <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
-                <span style="width: 10px"></span>
-                <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
-            </div>
-        </form>
-</div>
-```
 
       <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -127,7 +120,7 @@
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <!-- Link to API keys go here -->
-    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
+    <script src="./scripts/firebaseAPI_TEAM31.js"></script>
 
     <!-- Link to scripts of your own -->
     <script src="./scripts/profile_creation.js"></script>
