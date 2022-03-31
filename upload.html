@@ -102,6 +102,8 @@
       <input type="text" id="locationInput" class="form-control" placeholder="Where is your location">
     </div>
 
+    
+
 
     </fieldset>
     <div class="d-flex justify-content-end mt-5">
@@ -112,7 +114,19 @@
     </div>
     </form>
 
-    <img id="image"/>
+    <div class="container-fluid bg-light text-dark p-5">
+      <h1>Let's make a post</h1>
+      <div class="container py-3">
+          <input type="file" id="mypic-input" accept="image/*" />
+          <img id="mypic-goes-here" src="..." width=50 height=50 />
+      </div>
+
+      <div class="container py-3">
+          <label for="fname">Details:</label>
+          <input type="text" id="details">
+          <input type="submit" value="Post" id="post">
+      </div>
+</div>
 
 
   </div>

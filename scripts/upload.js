@@ -84,3 +84,90 @@ function editUserPost() {
 //         })
 //         .catch(console.error);
 //}
+
+//----------------------------0------------------------
+// This event listener waits for user to upload a image
+//-----------------------------------------------------
+function addImagePicker() {
+    const fileChoice = document.getElementById("mypic-input"); // pointer #1
+    const image = document.getElementById("mypic-goes-here"); // pointer #2
+    fileChoice.addEventListener('change', function (e) { //event listener
+        var file = e.target.files[0];
+        var blob = URL.createObjectURL(file);
+        image.src = blob; //change DOM image
+        console.log (file);  //just FYI, whole file object
+        console.log(file.name);  //just FYI, name of file
+        console.log(blob);  //string that represents file
+        //Temporarily store file object into local stroage
+        localStorage.setItem("pickedfile", file);
+    })
+}
+addImagePicker();
+
+
+//--------------------------------------------------------------
+        // This function is the event listener for the post button.
+        // it will go get the details entered by user at the DOM
+        // Create a new post object using ".add()"
+        // Then save the image that was previously uploaded.
+        //-------------------------------------------------------------
+        function addPostListener() {
+            document.getElementById("post").addEventListener("click", function () {
+                //alert("Post clicked!");
+
+                //construct a new post object with details from our form
+                var postdetails = document.getElementById("details").value;
+                var obj = {
+                    details: postdetails,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                }
+                //console.log(obj);
+
+                //create a new post doc and save into firestore with ".add"
+                db.collection("posts")
+                    .add(obj)
+                    .then(function (doc) {
+                        console.log("Created a new post object! ");
+                        console.log(doc.id); //prints id of the newly added doc
+                        savePicture(doc.id)  //id of newly created post
+                    })
+            })
+        }
+        addPostListener();
+
+                //------------------------------------------------------
+        // This function gets the picture that was recently picked
+        // and saved into localstorage, and "put" it into Firebase Storage.
+        // After it is done, then the URL is obtained.
+        // This URL is saved into the post object associated with this image
+        //-------------------------------------------------------
+        function savePicture(postid) {
+
+            //get the file that was picked earlier
+            var file = localStorage.getItem("pickedfile");
+
+            //get a pointer to where we went the picture to be saved
+            var storageRef = firebase.storage().ref(postid + ".jpg")
+
+            //upload the picked file with .put()
+            storageRef.put(file)
+                .then(function (snap) {
+                    //the file has successfully been put into storage
+                    console.log('Uploaded to Cloud Storage.');
+                    //get the URL of stored file with .getDownloadURL()
+                    storageRef.getDownloadURL()
+                        .then(function (url) { // Get URL of the uploaded file
+                            console.log(url); // Save the URL into users collection
+                            console.log(`File URL: ${url}`);
+                            db.collection("posts").doc(postid).update({
+                                    "image": url
+                                })
+                                .then(function () {
+                                    console.log('Added post picture to Firestore.');
+                                    //window.location.href="main.html";
+                                })
+                        })
+                })
+        }
+
+
