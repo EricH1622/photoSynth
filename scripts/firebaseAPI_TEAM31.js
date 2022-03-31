@@ -17,3 +17,5 @@ var firebaseConfig = {
 //--------------------------------------------
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+
+var storage = firebase.storage();

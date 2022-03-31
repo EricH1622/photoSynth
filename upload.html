@@ -19,6 +19,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
 
     <!-- Other libraries go here -->
 
@@ -79,6 +82,7 @@
 
   <div class="px-1 py-2 my-5">
     <h1 class="display-4">Post your Spot</h1>
+
     <br>
     <div class="form-group px-2 py-3">
       <label>UserName</label>
@@ -86,7 +90,8 @@
     </div>
     <div class="form-group px-2 py-3">
       <label>Photo</label>
-      <input type="file" id="photo_upload" class="form-control" placeholder="Choose a photo to upload">
+      <input type="file" id="photoInput" class="form-control" placeholder="Choose a photo to upload">
+      <img id="image" width="240" height="160"/>
     </div>
     <div class="form-group px-2 py-3">
       <label>Post Name</label>
@@ -96,13 +101,20 @@
       <label>Location Details</label>
       <input type="text" id="locationInput" class="form-control" placeholder="Where is your location">
     </div>
+
+
     </fieldset>
     <div class="d-flex justify-content-end mt-5">
-      <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
+      <button type="button" class="btn btn-secondary" onclick="editUserPost()">Edit</button>
       <span style="width: 10px"></span>
-      <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+      <button type="button" class="btn btn-info" onclick="saveUserPost()">Post</button>
+      <button type="button" class="btn btn-info" onclick="uploadImage()">Upload</button>
     </div>
     </form>
+
+    <img id="image"/>
+
+
   </div>
 
       <div class="container">
@@ -130,7 +142,7 @@
     <script src="./scripts/firebaseAPI_TEAM31.js"></script>
 
     <!-- Link to scripts of your own -->
-    <script src="./scripts/profile_creation.js"></script>
+    <script src="./scripts/upload.js"></script>
 
 </body>
 
