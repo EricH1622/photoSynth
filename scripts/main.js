@@ -1,38 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
+
+function like(){
+
 
     let change = document.querySelector("#icon");
 
-   change.addEventListener('click' ,function () {
-       let item = document.querySelector("#icon");
 
-       if(this.innerText == 'favorite'){
-            item.innerText = "favorite_border";
 
-        }else{   
-            item.innerText = "favorite";
+        if (this.innerText == 'favorite') {
+            change.innerText = "favorite_border";
 
-        }
-
-    })
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    let change = document.querySelector("#icon2");
-
-   change.addEventListener('click' ,function () {
-       let item = document.querySelector("#icon2");
-
-       if(this.innerText == 'favorite'){
-            item.innerText = "favorite_border";
-
-        }else{   
-            item.innerText = "favorite";
+        } else {
+            change.innerText = "favorite";
 
         }
 
-    })
-});
+
+}
+
+
+
+
 
 function writeLocatoins() {
     //define a variable for the collection you want to create in Firestore to populate data
@@ -44,8 +31,8 @@ function writeLocatoins() {
         city: "Burnaby",
         province: "BC",
         order: "1",
-        
-             //number value
+
+        //number value
         last_updated: firebase.firestore.FieldValue.serverTimestamp()  //current system time
     });
     hikesRef.add({
@@ -54,7 +41,7 @@ function writeLocatoins() {
         city: "Anmore",
         province: "BC",
         order: "2",
-   //number value
+        //number value
         last_updated: firebase.firestore.Timestamp.fromDate(new Date("March 10, 2022"))
     });
 }
@@ -73,17 +60,19 @@ function populateCardsDynamically() {
                 var hikeID = doc.data().id; //gets the unique ID field
                 let testHikeCard = hikeCardTemplate.content.cloneNode(true);
                 testHikeCard.querySelector('.card-title').innerHTML = hikeName;
-	                    
-                //NEW LINE: update to display length, duration, last updated
-                testHikeCard.querySelector('.card-length').innerHTML = 
-                
-                "Last updated: " + doc.data().last_updated.toDate(); 
 
+                //NEW LINE: update to display length, duration, last updated
+                testHikeCard.querySelector('.card-length').innerHTML =
+
+                    "Last updated: " + doc.data().last_updated.toDate();
+
+                    testHikeCard.querySelector('i').onclick = () => like();
 
                 testHikeCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                 hikeCardGroup.appendChild(testHikeCard);
             })
         })
 }
+
 
 populateCardsDynamically();
