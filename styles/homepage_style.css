@@ -9,10 +9,8 @@
     font-size: x-large;
 }
 
-.bg-image {
-    background-image: url(/images/landing1.jpg);
-    height: 100vh;
-    background-size: cover;
+#featured {
+    
 }
 
 .material-icons.md-18 { font-size: 18px; }

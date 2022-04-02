@@ -36,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
 
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -44,7 +45,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">photoSynth</a>
+      <a class="navbar-brand" href="landing.html">photoSynth</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -52,7 +53,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="main.html">Featured</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="login.html">Login</a>
@@ -87,45 +88,103 @@
   </nav>
 
   <div class="px-1 py-2 my-5 text-center">
-    <h1 class="display-4 fw-bold">Featured</h1>
+    <h1 class="display-4" id="featured">Featured</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-1">Explore some of BC's most popular photography</p>
+      <p class="lead mb-1">British Columbia's Most Popular</p>
 
     </div>
   </div>
 
-  <div id="database-picture-goes-here"></div>
+  <!-- <div id="database-picture-goes-here"></div> -->
 
   <div class="px-1 pt-3 my-3 text-center border-top">
-    <h2 class="display-5 fw-bold">Alta Lake</h2>
+    <h2 class="display-6 fw-bold" id="title">Alta Lake</h2>
   </div>
 
-
-
   <div class="overflow-hidden">
-    <div class="container px-5">
-      <img src="./images/1180056.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="1400"
-        height="1000" loading="lazy">
+    <div class="container">
+      <a href="featured1.html">
+        <img src="./images/1180056.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="2800"
+          height="2000" loading="lazy">
+      </a>
+      <h2>Glenn Arbor</h2>
+  
       <i id="icon" class="material-icons">favorite_border</i>
     </div>
   </div>
+
+  <div class="px-1 pt-3 my-3 text-center border-top">
+    <h2 class="display-6 fw-bold">Fangorn</h2>
+  </div>
+
+  <div class="overflow-hidden">
+    <div class="container px-1">
+      <a href="featured2.html">
+        <img src="./images/fangorn.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="1400"
+          height="1000" loading="lazy"></img>
+      </a>
+      <h2>Glenn Arbor</h2>
+      <i id="icon2" class="material-icons">favorite_border</i>
+    </div>
   </div>
 
   <div class="px-1 pt-3 my-3 text-center border-top">
-    <h2 class="display-5 fw-bold">Buntzen Lake</h2>
-
+    <h2 class="display-6 fw-bold">Empty City</h2>
   </div>
+
   <div class="overflow-hidden">
-    <div class="container px-5">
+    <div class="container px-1">
+      <a href="featured3.html">
+        <img src="./images/vancity.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="1400"
+          height="1000" loading="lazy"></img>
+      </a>
+      <h2>Glenn Arbor</h2>
+      <i id="icon2" class="material-icons">favorite_border</i>
+    </div>
+  </div>
+
+  <div class="px-1 pt-3 my-3 text-center border-top">
+    <h2 class="display-6 fw-bold">Capilano Suspension Bridge</h2>
+  </div>
+
+  <div class="overflow-hidden">
+    <div class="container px-1">
+      <a href="featured4.html">
+        <img src="./images/capbridge.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+          width="1400" height="1000" loading="lazy"></img>
+      </a>
+    <h2>Glenn Arbor</h2>
+    <i id="icon2" class="material-icons">favorite_border</i>
+  </div>
+  </div>
+
+  <div class="px-1 pt-3 my-3 text-center border-top">
+    <h2 class="display-6 fw-bold">Early Morning</h2>
+  </div>
+
+  <div class="overflow-hidden">
+    <div class="container px-1">
+      <img src="./images/earlymorning.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+        width="1400" height="1000" loading="lazy"></img>
+        <h2>Glenn Arbor</h2>
+      <i id="icon2" class="material-icons">favorite_border</i>
+    </div>
+  </div>
+
+
+  <div class="px-1 pt-3 my-3 text-center border-top">
+    <h2 class="display-6 fw-bold">Buntzen Lake</h2>
+  </div>
+
+  <div class="overflow-hidden">
+    <div class="container px-1">
       <img src="./images/NorthBuntzenLake.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
         width="1400" height="1000" loading="lazy"></img>
+        <h2>Glenn Arbor</h2>
       <i id="icon2" class="material-icons">favorite_border</i>
-
-
     </div>
+  </div>
 
-  </div>
-  </div>
 
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

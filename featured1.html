@@ -32,81 +32,93 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/landing.css">
+  <link rel="stylesheet" href="./styles/homepage_style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono&display=swap" rel="stylesheet">
 
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <div class="bg-image">
-  
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">photoSynth</a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="main.html">Featured</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="login.html">Login</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Locations
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="main.html">Vancouver</a></li>
-                <li><a class="dropdown-item" href="main.html">Okanagan</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="main.html">BC</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="profile_creation.html" tabindex="-1" aria-disabled="true">MyProfile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="upload.html" tabindex="-1" aria-disabled="true">Post</a>
-            </li>
-          </ul>
-          <!-- <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
-        </div>
-      </div>
-    </nav>
-
-    <div class="px-4 py-5 my-5">
-      <!-- <h1 class="display-5 fw-bold" id="logo-landing">photoSynth</h1> -->
-      <h1 class="display-5 fw-bold position-absolute top-40 start-50" id="logo-landing">&emsp;&emsp;photoSynth</h1>
-      <div class="col-lg-6 mx-auto">
-        <br><br><br><br>
-        <p class="lead mb-4 position-absolute top-40 start-50" id="text-landing">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Explore some of BC's latest photography</p>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class="btn btn-primary btn-lg px-4 gap-3" href="upload.html">Contribute</button>
-          <button type="button" class="btn btn-outline-light btn-lg px-4" href="login.html">Get Started</button>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="landing.html">photoSynth</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="main.html">Featured</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="login.html">Login</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Locations
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Vancouver</a></li>
+              <li><a class="dropdown-item" href="#">Okanagan</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">BC</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="profile_creation.html" tabindex="-1" aria-disabled="true">MyProfile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="upload.html" tabindex="-1" aria-disabled="true">Post</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
+  </nav>
 
-
-
+  <!-- <div id="database-picture-goes-here"></div> -->
+  <div class="text-center">
+  <img src="/images/1180056.jpg" class="img-fluid" alt="...">
   </div>
 
-  
+  <div class="overflow-hidden px-1 pt-3 my-3 border-top">
+    <div class="container">
+      <div id="postTitle">
+        <h2 class="display-6 fw-bold" id="title">Alta Lake</h2><br>
+      </div>
+      <div id="description">
+        <p>After staying in whistler for several nights I finally got the perfect picture of the lake.</p><br>
+      </div>
+      <div id="locationHolder">
+        <h6>Location:</h6>
+        <div id="locationDetails">
+          <p>Whistler, British Columbia. On the other side of "Whistler on the Lake" Hotel at 4:15</p>
+        </div>
+      </div>
+      <div id="setupHolder">
+        <h6>Camera Setup:</h6>
+        <div id="setup">
+          <p>I shot this on my Nikon n7 with Long Exposure NR: On, flicker reduction: On, and HDR off.</p>
+        </div>
+      </div>
+      <div id="poster">
+        </h2>
+        <h2>- Glenn Arbor</h2><br>
+      </div>
+      <i id="icon" class="material-icons">favorite_border</i>
+    </div>
+  </div>
 
 
   <div class="container">
