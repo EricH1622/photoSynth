@@ -59,6 +59,7 @@ function editUserInfo() {
     })
     .then(() => {
         console.log("Document successfully updated!");
+        window.location.href="Profile.html";
     })
 
     document.getElementById('personalInfoFields').disabled = true;

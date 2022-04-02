@@ -1,6 +1,24 @@
 .navbar-dark {
-    background-color: dodgerblue;
-    color: gainsboro;
+    background-color: none;
+    color: white;
+}
+
+#nav-landing {
+    background-color: none;
+}
+
+#logo-landing {
+    font-family: 'Red Hat Mono', monospace;
+    color: white;
+    font-size: 80px;
+}
+
+#text-landing {
+    color: white;
+}
+
+#navbar-landing {
+    color: white;
 }
 
 .navbar-brand {

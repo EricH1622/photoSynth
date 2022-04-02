@@ -88,48 +88,35 @@
       <label>UserName</label>
       <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
     </div>
+
     <div class="form-group px-2 py-3">
       <label>Photo</label>
-      <input type="file" id="photoInput" class="form-control" placeholder="Choose a photo to upload">
-      <img id="image" width="240" height="160"/>
+      <input type="file" id="mypic-input" accept="image/*" class="form-control" />
+      <img id="mypic-goes-here" src="..." width=480 height=320 />
     </div>
+
     <div class="form-group px-2 py-3">
       <label>Post Name</label>
       <input type="text" id="postInput" class="form-control" placeholder="What is your spot called?">
     </div>
+
     <div class="form-group px-2 py-3">
-      <label>Location Details</label>
-      <input type="text" id="locationInput" class="form-control" placeholder="Where is your location">
+      <label for="fname">Location Details</label>
+      <input type="text" id="details" class="form-control" placeholder="How do you access the location?">
     </div>
-
-    
-
-
     </fieldset>
+
     <div class="d-flex justify-content-end mt-5">
+      
       <button type="button" class="btn btn-secondary" onclick="editUserPost()">Edit</button>
       <span style="width: 10px"></span>
-      <button type="button" class="btn btn-info" onclick="saveUserPost()">Post</button>
-      <button type="button" class="btn btn-info" onclick="uploadImage()">Upload</button>
+      <input type="submit" value="Post" id="post">
+      <!-- <button type="button" class="btn btn-info" onclick="saveUserPost()">Post</button>
+      <button type="button" class="btn btn-info" onclick="uploadImage()">Upload</button> -->
     </div>
     </form>
 
     <div class="container-fluid bg-light text-dark p-5">
-      <h1>Let's make a post</h1>
-      <div class="container py-3">
-          <input type="file" id="mypic-input" accept="image/*" />
-          <img id="mypic-goes-here" src="..." width=50 height=50 />
-      </div>
-
-      <div class="container py-3">
-          <label for="fname">Details:</label>
-          <input type="text" id="details">
-          <input type="submit" value="Post" id="post">
-      </div>
-</div>
-
-
-  </div>
 
       <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">

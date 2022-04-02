@@ -85,24 +85,39 @@ function editUserPost() {
 //         .catch(console.error);
 //}
 
-//----------------------------0------------------------
+//----------------------------------------------------
 // This event listener waits for user to upload a image
 //-----------------------------------------------------
+var theFile;      //global variable pointing to the locally picked file object
 function addImagePicker() {
     const fileChoice = document.getElementById("mypic-input"); // pointer #1
     const image = document.getElementById("mypic-goes-here"); // pointer #2
     fileChoice.addEventListener('change', function (e) { //event listener
-        var file = e.target.files[0];
-        var blob = URL.createObjectURL(file);
-        image.src = blob; //change DOM image
-        console.log (file);  //just FYI, whole file object
-        console.log(file.name);  //just FYI, name of file
-        console.log(blob);  //string that represents file
-        //Temporarily store file object into local stroage
-        localStorage.setItem("pickedfile", file);
+        theFile = e.target.files[0];
+        var blob = URL.createObjectURL(theFile);
+        image.src = blob; //show this DOM image for now
     })
 }
 addImagePicker();
+
+// //----------------------------0------------------------
+// // This event listener waits for user to upload a image
+// //-----------------------------------------------------
+// function addImagePicker() {
+//     const fileChoice = document.getElementById("mypic-input"); // pointer #1
+//     const image = document.getElementById("mypic-goes-here"); // pointer #2
+//     fileChoice.addEventListener('change', function (e) { //event listener
+//         var file = e.target.files[0];
+//         var blob = URL.createObjectURL(file);
+//         image.src = blob; //change DOM image
+//         console.log (file);  //just FYI, whole file object
+//         console.log(file.name);  //just FYI, name of file
+//         console.log(blob);  //string that represents file
+//         //Temporarily store file object into local stroage
+//         localStorage.setItem("pickedfile", file);
+//     })
+// }
+// addImagePicker();
 
 
 //--------------------------------------------------------------
