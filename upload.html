@@ -38,7 +38,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="landing.html">photoSynth</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="main.html">Featured</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="login.html">Login</a>
@@ -74,14 +74,14 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
 
   <div class="px-1 py-2 my-5">
-    <h1 class="display-4">Post your Spot</h1>
+    <h1 class="display-3 text-center">Post your Spot</h1>
 
     <br>
     <div class="form-group px-2 py-3">
@@ -90,27 +90,37 @@
     </div>
 
     <div class="form-group px-2 py-3">
+      <label>Post Name</label>
+      <input type="text" id="postInput" class="form-control" placeholder="What is your spot called?">
+    </div>
+
+    <div class="form-group px-2 py-3" id="postPhotoInput">
       <label>Photo</label>
       <input type="file" id="mypic-input" accept="image/*" class="form-control" />
-      <img id="mypic-goes-here" src="..." width=480 height=320 />
+      <img id="mypic-goes-here" src="..." height=500 />
     </div>
 
     <div class="form-group px-2 py-3">
-      <label>Post Name</label>
-      <input type="text" id="postInput" class="form-control" placeholder="What is your spot called?">
+      <label for="fname">Description</label>
+      <input type="text" id="details" class="form-control" placeholder="Photo description">
     </div>
 
     <div class="form-group px-2 py-3">
       <label for="fname">Location Details</label>
       <input type="text" id="details" class="form-control" placeholder="How do you access the location?">
     </div>
+
+    <div class="form-group px-2 py-3">
+      <label for="fname">Camera Setup</label>
+      <input type="text" id="details" class="form-control" placeholder="What equipment / settings did you use?">
+    </div>
     </fieldset>
 
-    <div class="d-flex justify-content-end mt-5">
+    <div class="d-flex justify-content-center mt-5">
       
       <button type="button" class="btn btn-secondary" onclick="editUserPost()">Edit</button>
       <span style="width: 10px"></span>
-      <input type="submit" value="Post" id="post">
+      <input type="submit" class="btn btn-primary" value="Post" id="post">
       <!-- <button type="button" class="btn btn-info" onclick="saveUserPost()">Post</button>
       <button type="button" class="btn btn-info" onclick="uploadImage()">Upload</button> -->
     </div>

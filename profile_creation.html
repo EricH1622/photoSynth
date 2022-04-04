@@ -35,7 +35,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="landing.html">photoSynth</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="main.html">Featured</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="login.html">Login</a>
@@ -71,36 +71,41 @@
         </ul>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
     </div>
   </nav>
 
   <div class="px-1 py-2 my-5">
-    <h1 class="display-4">Profile Creation</h1>
+    <h1 class="display-3 text-center">Profile Creation</h1>
     <br>
+
     <div class="form-group px-2 py-3">
       <label>UserName</label>
       <input type="text" id="nameInput" class="form-control" placeholder="Enter your name">
     </div>
+
     <div class="form-group px-2 py-3">
       <label>Bio</label>
       <input type="text" id="bioInput" class="form-control" placeholder="Please write a bio for yourself">
     </div>
+
     <div class="form-group px-2 py-3">
       <label>City</label>
       <input type="text" id="cityInput" class="form-control" placeholder="Enter your city">
     </div>
+
     <div class="form-group px-2 py-3">
       <label>Camera Gear</label>
       <input type="text" id="gearInput" class="form-control" placeholder="Enter your gear">
     </div>
+    
     </fieldset>
-    <div class="d-flex justify-content-end mt-5">
+    <div class="d-flex justify-content-center mt-5">
       <button type="button" class="btn btn-secondary" onclick="editUserInfo()">Edit</button>
       <span style="width: 10px"></span>
-      <button type="button" class="btn btn-info" onclick="saveUserInfo()">Save</button>
+      <button type="button" class="btn btn-primary" onclick="saveUserInfo()">Save</button>
     </div>
     </form>
   </div>

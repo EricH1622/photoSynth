@@ -6,3 +6,9 @@
 #gallery {
     text-align: center;
 }
+
+.navbar-brand {
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: 500;
+    font-size: x-large;
+}
