@@ -102,17 +102,17 @@
 
     <div class="form-group px-2 py-3">
       <label for="fname">Description</label>
-      <input type="text" id="details" class="form-control" placeholder="Photo description">
+      <input type="text" id="descriptionInput" class="form-control" placeholder="Photo description">
     </div>
 
     <div class="form-group px-2 py-3">
       <label for="fname">Location Details</label>
-      <input type="text" id="details" class="form-control" placeholder="How do you access the location?">
+      <input type="text" id="locationInput" class="form-control" placeholder="How do you access the location?">
     </div>
 
     <div class="form-group px-2 py-3">
       <label for="fname">Camera Setup</label>
-      <input type="text" id="details" class="form-control" placeholder="What equipment / settings did you use?">
+      <input type="text" id="settingsInput" class="form-control" placeholder="What equipment / settings did you use?">
     </div>
     </fieldset>
 
@@ -120,7 +120,7 @@
       
       <button type="button" class="btn btn-secondary" onclick="editUserPost()">Edit</button>
       <span style="width: 10px"></span>
-      <input type="submit" class="btn btn-primary" value="Post" id="post">
+      <input type="submit" class="btn btn-primary" onclick="saveUserPost()" value="Post" id="post">
       <!-- <button type="button" class="btn btn-info" onclick="saveUserPost()">Post</button>
       <button type="button" class="btn btn-info" onclick="uploadImage()">Upload</button> -->
     </div>

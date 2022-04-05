@@ -15,6 +15,8 @@ function populateInfo() {
                     // var userPhoto = userDoc.data().photo;
                     var userPost = userDoc.data().post;
                     var userLocation = userDoc.data().location;
+                    var userDescription = userDoc.data().description;
+                    var userSettings = userDoc.data().settings;
 
                     //if the data fields are not empty, then write them in to the form.
                     if (userName != null) {
@@ -28,6 +30,12 @@ function populateInfo() {
                     }
                     if (userLocation != null) {
                         document.getElementById("locationInput").value = userLocation;
+                    }
+                    if (userDescription != null) {
+                        document.getElementById("descriptionInput").value = userDescription;
+                    }
+                    if (userDescription != null) {
+                        document.getElementById("settingsInput").value = userSettings;
                     }
                 })
         } else {
@@ -50,12 +58,16 @@ function editUserPost() {
     // userPhoto = document.getElementById('photoInput').value;     //get the value of the field with id="schoolInput"
     userPost = document.getElementById('postInput').value;
     userLocation = document.getElementById('locationInput').value;
+    userDescription = document.getElementById('descriptionInput').value;
+    userSettings = document.getElementById('settingsInput').value;
 
     currentUser.update({
         username: userName,
         // photo: userPhoto,
         Post: userPost,
-        Location: userLocation
+        Location: userLocation,
+        Description: userDescription,
+        Settings: userSettings
     })
 
     .then(() => {
@@ -64,6 +76,7 @@ function editUserPost() {
 
     document.getElementById('personalInfoFields').disabled = true;
 }
+
 
 // Uploads pictures to firestore storage
 // caled by the user
@@ -131,7 +144,7 @@ addImagePicker();
                 //alert("Post clicked!");
 
                 //construct a new post object with details from our form
-                var postdetails = document.getElementById("details").value;
+                var postdetails = document.getElementById("descriptionInput").value;
                 var obj = {
                     details: postdetails,
                     timestamp: firebase.firestore.FieldValue.serverTimestamp()
@@ -179,7 +192,7 @@ addImagePicker();
                                 })
                                 .then(function () {
                                     console.log('Added post picture to Firestore.');
-                                    //window.location.href="main.html";
+                                    window.location.href="postFeatured.html";
                                 })
                         })
                 })
