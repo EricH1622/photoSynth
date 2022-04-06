@@ -92,4 +92,16 @@ function insertName(){
     }
     insertName();
 
+    var theFile;      //global variable pointing to the locally picked file object
+function addImagePicker() {
+    const fileChoice = document.getElementById("mypic-input"); // pointer #1
+    const image = document.getElementById("mypic-goes-here"); // pointer #2
+    fileChoice.addEventListener('change', function (e) { //event listener
+        theFile = e.target.files[0];
+        var blob = URL.createObjectURL(theFile);
+        image.src = blob; //show this DOM image for now
+    })
+}
+addImagePicker();
+
 
